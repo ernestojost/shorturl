@@ -21,10 +21,7 @@ export async function GET() {
       uniqueIPs: uniqueIPs[0].unique_ips || 0,
     });
   } catch (error) {
-    console.error("Error obteniendo estadísticas:", error);
-    return NextResponse.json(
-      { error: "Error obteniendo estadísticas" },
-      { status: 500 }
-    );
+    console.error("Error getting stats:", error);
+    return NextResponse.json({ error: "Error getting stats" }, { status: 500 });
   }
 }

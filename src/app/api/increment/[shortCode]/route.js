@@ -6,7 +6,6 @@ export async function POST(request, { params }) {
 
   try {
     const connection = await pool.getConnection();
-    console.log("Suma de clics");
     await connection.execute(
       "UPDATE short_urls SET clicks = clicks + 1 WHERE short_code = ?",
       [shortCode]
