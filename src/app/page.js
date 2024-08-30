@@ -120,19 +120,19 @@ export default function Home() {
         </form>
         {error && <p className="mt-3 text-red-400 text-sm">{error}</p>}
         {shortUrl && (
-          <div className="mt-4 p-3 bg-gray-800 rounded">
-            <div className="flex items-center">
+          <div className="mt-4 p-3 bg-gray-800 rounded transition-opacity duration-500 opacity-0 animate-fade-in">
+            <div className="flex flex-col items-center justify-between">
               <a
                 href={shortUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 hover:underline break-all text-sm mr-2"
+                className="text-blue-400 hover:underline break-all text-sm font-bold mb-2"
               >
                 {shortUrl}
               </a>
               <button
                 onClick={copyToClipboard}
-                className="bg-blue-500 text-white p-1 rounded text-xs"
+                className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded text-sm"
                 aria-label="Copy to clipboard"
               >
                 📋 Copy
